@@ -1,0 +1,108 @@
+# ----- macOS cruft -----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+*.icloud
+
+# ----- Editors & IDEs -----
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+*~
+*.swp
+*.swo
+
+# ----- Xcode / Swift -----
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.xcworkspace
+.swiftpm/
+.build/
+
+# ----- Node / JavaScript / TypeScript -----
+node_modules/
+dist/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ----- Java -----
+target/
+.classpath
+.project
+.settings/
+out/
+*.class
+
+# ----- C / C++ / CMake -----
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+*.exe
+*.out
+
+# ----- Rust -----
+target/
+# (Keep Cargo.lock for apps; don't ignore it.)
+
+# ----- Go -----
+bin/
+*.test
+
+# ----- Ruby -----
+.bundle/
+vendor/bundle/
+
+# ----- Haskell (stack) -----
+.stack-work/
+
+# ----- Dotenv & secrets -----
+.env
+.env.*
+!.env.example
+
+# ----- Misc -----
+*.log
+*.tmp
+*.orig
+*.bak
+
+# ----- Advent of Code (optional) -----
+# Uncomment if you don't want to commit puzzle inputs
+# input.txt
+# inputs/
+
