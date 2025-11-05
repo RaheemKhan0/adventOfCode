@@ -17,6 +17,5 @@ for i in range(len(values)):
             if values[i] + values[j] + values[z] == 2020:
                 print(values[i] * values[j] * values[z])
                 break
-
-
+            
 
