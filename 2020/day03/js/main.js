@@ -21,7 +21,7 @@ const slopes = [
   [3, 1],
   [5, 1],
   [7, 1],
-  [1, 7],
+  [1, 2],
 ];
 const treeEncountersArr = [];
 for (const slope of slopes) {
@@ -32,15 +32,11 @@ for (const slope of slopes) {
     if (c >= COLS) {
       c -= COLS;
     }
-    console.log("arr : ", arr[r]);
-    console.log(`r : ${r} , c : ${c}`);
-    console.log("arr[r][c] : ", arr[r][c]);
     if (arr[r][c] == "#") {
-      console.log("tree encountered : ", treeEncounters + 1);
       treeEncounters += 1;
     }
-    c += 3;
-    r += 1;
+    c += slope[0];
+    r += slope[1];
   }
   console.log(`tree encounters : ${treeEncounters} for slope ${slope}`);
   treeEncountersArr.push(treeEncounters);
