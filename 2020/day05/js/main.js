@@ -45,7 +45,7 @@ const filepath = fileURLToPath(import.meta.url);
 const dirpath = path.dirname(filepath);
 const inputs = readFileSync(path.join(dirpath, "../day05.txt"), "utf-8");
 
-const ticketarr = inputs.split("\n");
+const ticketarr = inputs.trim().split("\n");
 let seatIdarr = [];
 
 let maxSeatID = 0;
@@ -68,10 +68,9 @@ seatIdarr = seatIdarr.sort((a, b) => a - b);
 let res;
 for (let i = 1; i <= seatIdarr.length - 2; i++) {
   console.log(
-    `if : seatId: ${seatIdarr[i]} + 2 == seatIdarr[i + 1] ${seatIdarr[i + 1]}`,
+    `if : seatId: ${seatIdarr[i] + 2} == seatIdarr[i + 1] ${seatIdarr[i + 1]}`,
   );
-  if (seatIdarr[i + 1] === seatIdarr[i] + 2) {
-    // If the difference is 2, the missing ID is the one in between
+  if (seatIdarr.find((seatId) => seatId != seatIdarr[i] + 1) && seatIdarr.find((seatId) => seatId == seatIdarr[i] + 2) ) {
     res = seatIdarr[i] + 1;
     console.log("our seat id : ", res);
     break;
