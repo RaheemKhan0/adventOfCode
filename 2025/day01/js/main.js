@@ -11,7 +11,7 @@ let password = 0;
 
 
 
-function processInput(str="") {
+function processInput(dial, str="") {
   if (!str) return
-  
+      
 }
