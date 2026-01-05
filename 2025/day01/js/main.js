@@ -7,6 +7,7 @@ const dir = path.dirname(__filename);
 const inputs = readFileSync(path.join(dir, "../day01.txt"), "utf8");
 const DIAL = 50;
 let password = 0;
+console.log('hello')
 
 
 
