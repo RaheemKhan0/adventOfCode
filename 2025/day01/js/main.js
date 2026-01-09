@@ -11,14 +11,16 @@ let res = 0;
 
 function processInput(dial, str = "") {
   if (!str) return;
-  console.log("str : ", str);
 
   const dir = str[0];
   const arr = str.split(/[A-Za-z]/);
   const val = Number(arr[1]);
   console.log(arr);
-  console.log("dir : ", dir);
-  console.log("val : ", val);
+  if (val > 100) {
+   const overval =  Math.floor(val / 100);
+    res += overval;
+    console.log('overval : ' , overval);
+  }
   let modval = val % 100;
 
   if (!dir || !val) {
@@ -27,12 +29,16 @@ function processInput(dial, str = "") {
   if (dir == "L") {
     let diff = dial - modval;
     if (diff < 0) {
+      console.log('difference res : ' , res);
+      res += 1;
       return 100 + diff;
     }
     return diff;
   } else {
     let add = dial + modval;
     if (add >= 100) {
+      console.log('adding res : ' , res);
+      res += 1;
       return 0 + (add % 100);
     }
     return add;
@@ -41,6 +47,7 @@ function processInput(dial, str = "") {
 
 for (const str of processinput) {
   dial = processInput(dial, str);
+  console.log('dial : ',  dial);
   if (dial == 0) {
     res += 1;
   }
