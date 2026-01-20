@@ -15,7 +15,7 @@ function processInput(currentDial, str = "") {
   const direction = str[0];
   console.log("direction : ", direction);
   const value = Number(str.slice(1));
-  console.log("value : ", value);
+  console.log("value1 : ", value);
 
   let newDial;
 
