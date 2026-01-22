@@ -13,7 +13,7 @@ function processInput(currentDial, str = "") {
   if (!str.trim()) return currentDial; // Return current position if string is empty
 
   const direction = str[0];
-  console.log("direction : ", direction);
+  console.log("direction 1: ", direction);
   const value = Number(str.slice(1));
   console.log("value1 : ", value);
 
