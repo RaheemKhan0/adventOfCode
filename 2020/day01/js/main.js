@@ -16,7 +16,9 @@ for (let index = 0; index < input.length; index++) {
   }
   arr.push(Number(number));
 }
+console.log('hello world');
 for (let i = 0; i < arr.length; i++) {
+
   for (let j = i; j < arr.length; j++) {
     if (arr[i] + arr[j] == 2020) {
       console.log(`1 : ${arr[i]}\n 2: ${arr[j]}`);
