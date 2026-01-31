@@ -8,6 +8,7 @@ const inputs = readFileSync(path.join(dir, "../day01.txt"), "utf8");
 const processedinput = inputs.split("\n");
 let dial = 50;
 let res = 0;
+console.log('full')
 
 function processInput(currentDial, str = "") {
   if (!str.trim()) return currentDial; // Return current position if string is empty
